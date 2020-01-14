@@ -1,0 +1,36 @@
+{
+  "name": "a11y-react-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 1234"
+  },
+  "keywords": [],
+  "author": "Ryan Hinchey <rlhinchey@gmail.com> (http://twitter.com/ryhinchey)",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.8.0",
+    "@babel/preset-env": "7.8.2",
+    "@babel/preset-react": "7.8.0",
+    "@babel/preset-typescript": "7.8.0",
+    "@types/react": "16.9.17",
+    "@types/react-dom": "16.9.4",
+    "lerna": "^3.20.2",
+    "rimraf": "3.0.0",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-peer-deps-external": "2.2.0",
+    "rollup-plugin-postcss": "2.0.3",
+    "typescript": "3.7.4"
+  }
+}

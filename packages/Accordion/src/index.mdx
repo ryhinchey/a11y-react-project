@@ -1,0 +1,42 @@
+---
+name: Accordion
+route: /
+---
+import { Playground, Props } from 'docz'
+
+import Accordion from './index.tsx';
+
+<Meta title="Accordion" component={Accordion} />
+
+# Accordion
+
+The best way to do this thing.
+
+<Props of={Accordion} />
+
+<Playground>
+<Accordion components={[
+  {
+    Header: () => <h3>Name</h3>,
+    Panel: () => (
+      <form>
+        <label>
+          Name
+          <input type="text" />
+        </label>
+      </form>
+    )
+  },
+  {
+    Header: () => <h3>Address</h3>,
+    Panel: () => (
+      <form>
+        <label>
+          Address
+          <input type="text" />
+        </label>
+      </form>
+    )
+  }
+]} />
+</Playground>

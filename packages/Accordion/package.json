@@ -1,0 +1,15 @@
+{
+  "name": "accordion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ryan Hinchey <rlhinchey@gmail.com> (http://twitter.com/ryhinchey)",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn clean && rollup --config '../../rollup.config.js'",
+    "clean": "rimraf dist"
+  },
+  "peerDependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}
