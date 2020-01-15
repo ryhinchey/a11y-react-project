@@ -13,14 +13,17 @@ interface AccordionItemProps {
 }
 
 interface AccordionProps {
-  components: AccordionComponent[]
+  components: AccordionComponent[];
+  header: string;
 }
 
 interface AccordionHeaderProps extends AccordionItemProps {
   setIsExpanded: Function;
 }
 
-const AccordionHeader = ({ Component, isExpanded, setIsExpanded }: AccordionHeaderProps) => {
+const AccordionHeader = (props: AccordionHeaderProps) => {
+  const { Component, isExpanded, setIsExpanded } = props;
+
   return (
     <button onClick={() => setIsExpanded(!isExpanded)}>
       <Component />
@@ -52,9 +55,10 @@ const AccordionItem = ({ component }: { component: AccordionComponent }) => {
   );
 };
 
-const Accordion = ({ components }: AccordionProps) => {
+const Accordion = ({ components = [], header = "" }: AccordionProps) => {
   return (
     <div>
+      {header}
       {components.map(component => (
         <AccordionItem component={component} />
       ))}

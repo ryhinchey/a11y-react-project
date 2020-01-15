@@ -1,0 +1,18 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Accordion from '.';
+
+<Meta title="MDX/Checkbox" component={Accordion} />
+
+# Checkbox
+
+## Props
+<Props of={Accordion} />
+
+<Preview>
+  <Story name="all checkboxes">
+    <Accordion
+      header="hi" 
+      components={[{Header: () => <h1>header</h1>, Panel: () => <p>panel</p>}]} 
+    />
+  </Story>
+</Preview>
